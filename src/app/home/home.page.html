@@ -1,7 +1,7 @@
 
 
 <ion-content [fullscreen]="true">
-  <ion-tabs>
+  <ion-tabs *ngIf="directorio[15]==true">
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="carro">
         <ion-icon name="basket-outline"></ion-icon>
@@ -20,4 +20,23 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
+
+<ion-item *ngIf="directorio[15]==false">
+  <div>
+    <ion-text>
+      <h1>Username</h1>
+    </ion-text>
+    <ion-input type="text" placeholder="Username" [(ngModel)]="pusuario"></ion-input>
+    <ion-text>
+      <h1>Password</h1>
+    </ion-text>
+    <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+    <ion-button (click)="contrasena()" expand="block" fill="clear" shape="round">
+      Enter
+    </ion-button>
+    <ion-button (click)="invitado()" expand="block" fill="clear" shape="round">
+      Entrar como invitado
+    </ion-button>
+  </div>
+</ion-item>
 </ion-content>
