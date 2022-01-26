@@ -26,6 +26,90 @@ export class ComprasPage implements OnInit {
       url: "assets/images/agua1.jpg"
     };
     this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "galletas",
+      precio: 30,
+      url: "assets/images/galletas.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "pasta de dientes",
+      precio: 25,
+      url: "assets/images/crust.png"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "escobas",
+      precio: 35,
+      url: "assets/images/8300.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "mejor amigo",
+      precio: 250,
+      url: "assets/images/friend.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "mascara de koala",
+      precio: 150,
+      url: "assets/images/koala.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "mayonesa",
+      precio: 30,
+      url: "assets/images/mayonaise.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "chango",
+      precio: 4000,
+      url: "assets/images/monky.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "mostasa",
+      precio: 30,
+      url: "assets/images/mustard.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "oreos",
+      precio: 20,
+      url: "assets/images/oreos.png"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "peluche pokemon",
+      precio: 120,
+      url: "assets/images/pikachu.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "poptarts",
+      precio: 25,
+      url: "assets/images/poptarts.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "eskeleto anatomicamente correcto",
+      precio: 400,
+      url: "assets/images/skeleton.jpg"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "snickers",
+      precio: 10,
+      url: "assets/images/sniickers.png"
+    };
+    this.listaproductos.push(this.informaccion);
+    this.informaccion ={
+      nombre: "mascara toy-story",
+      precio: 20,
+      url: "assets/images/woody.png"
+    };
+    this.listaproductos.push(this.informaccion);
 
   }
 
