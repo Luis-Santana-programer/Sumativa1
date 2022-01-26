@@ -23,6 +23,32 @@
       </ion-button>
     </div>
   </ion-item>
+
+  <ion-item *ngIf="directorio[16]==0 && directorio[15]==true">
+    <div>
+      <ion-text>
+        <h1>Username</h1>
+      </ion-text>
+      <ion-input type="text" placeholder="Username" [(ngModel)]="pusuario"></ion-input>
+      <ion-text>
+        <h1>Password</h1>
+      </ion-text>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+      <ion-button (click)="contrasena()" expand="block" fill="clear" shape="round">
+        Enter
+      </ion-button>
+    </div>
+  </ion-item>
+  
+  <ion-item *ngIf="directorio[16]==1 && directorio[15]==true">
+    <div>
+      <ion-text>
+        <h1>Luis Santana</h1>
+        <h2>11137@portalcedi.edu.mx</h2>
+        <h3>25/01/2021</h3>
+      </ion-text>
+    </div>
+  </ion-item>
   
   <ion-item *ngIf="directorio[15]==true">
     <ion-button (click)="Cerrar()" expand="block" fill="clear" shape="round">

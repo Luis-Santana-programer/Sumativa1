@@ -20,21 +20,21 @@ export class PerfilPage implements OnInit {
     this.directorio=await this.storage.get('directorio');
   }
 
-  contrasena(){
+  async contrasena(){
     if(this.pusuario=="Username"){
       if(this.password=="password"){
         this.directorio[15]=true;
         this.directorio[16]=1;
-        this.storage.set('directorio',this.directorio);
+        await this.storage.set('directorio',this.directorio);
         window.location.reload();
       }
     }
   }
 
-  invitado(){
+  async invitado(){
     this.directorio[15]=true;
     this.directorio[16]=0;
-    this.storage.set('directorio',this.directorio);
+    await this.storage.set('directorio',this.directorio);
     window.location.reload();
   }
 
