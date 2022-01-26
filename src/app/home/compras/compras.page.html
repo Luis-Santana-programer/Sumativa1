@@ -5,25 +5,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Agua 1</ion-card-title>
-      <ion-card-subtitle>$20</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-item>
-        <ion-button (click)="menos(0)" shape="square">
-          -
+  <!-- Card 1 -->
+  <ion-item *ngFor="let product of listaproductos;let indice=index">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{listaproductos[indice].nombre}}</ion-card-title>
+        <ion-img src={{listaproductos[indice].url}}></ion-img>
+        <ion-card-title>{{listaproductos[indice].precio}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-item>
+          <ion-button (click)="menos(indice)" shape="square">
+            -
+          </ion-button>
+          <ion-input type="number" [(ngModel)]="productos[indice]"></ion-input>
+          <ion-button (click)="mas(indice)" shape="square">
+            +
+          </ion-button>
+        </ion-item>
+        <ion-button (click)="agregaralcarro(indice)" expand="block" fill="clear" shape="round">
+          agregar al carro
         </ion-button>
-        <ion-input type="number" [(ngModel)]="productos[0]"></ion-input>
-        <ion-button (click)="mas(0)" shape="square">
-          +
-        </ion-button>
-      </ion-item>
-      <ion-button (click)="agregaralcarro(0)" expand="block" fill="clear" shape="round">
-        agregar al carro
-      </ion-button>
-    </ion-card-content>
-  </ion-card>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
 </ion-content>

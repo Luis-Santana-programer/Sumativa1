@@ -10,6 +10,7 @@ export class HomePage implements OnInit {
   producto: number=0;
   usuario: boolean=false;
   nusuario: number;
+  total: number=0;
   password: string;
   pusuario: string;
   productos: any;
@@ -32,23 +33,11 @@ export class HomePage implements OnInit {
        }
        this.directorio.push(this.usuario);
        this.directorio.push(this.nusuario);
+       this.directorio.push(this.total);
       this.storage.set('directorio',this.directorio);
     }
 
   }
 
-  contrasena(){
-    if(this.pusuario=="Username"){
-      if(this.password=="password"){
-        this.directorio[15]=true;
-        this.directorio[16]=1;
-        this.storage.set('directorio',this.directorio);
-      }
-    }
-  }
-  invitado(){
-    this.directorio[15]=true;
-    this.directorio[16]=0;
-    this.storage.set('directorio',this.directorio);
-  }
+
 }

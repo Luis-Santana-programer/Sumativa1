@@ -6,7 +6,7 @@
       <ion-tab-button tab="carro">
         <ion-icon name="basket-outline"></ion-icon>
         <ion-label>Carro</ion-label>
-        <ion-badge>6</ion-badge>
+        <ion-badge>{{directorio[17]}}</ion-badge>
       </ion-tab-button>
 
       <ion-tab-button tab="compras">
@@ -21,22 +21,18 @@
     </ion-tab-bar>
   </ion-tabs>
 
-<ion-item *ngIf="directorio[15]==false">
-  <div>
+  <div *ngIf="directorio[15]==false">
     <ion-text>
-      <h1>Username</h1>
+      <h1>Inicie seccion</h1>
     </ion-text>
-    <ion-input type="text" placeholder="Username" [(ngModel)]="pusuario"></ion-input>
-    <ion-text>
-      <h1>Password</h1>
-    </ion-text>
-    <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
-    <ion-button (click)="contrasena()" expand="block" fill="clear" shape="round">
-      Enter
-    </ion-button>
-    <ion-button (click)="invitado()" expand="block" fill="clear" shape="round">
-      Entrar como invitado
-    </ion-button>
-  </div>
-</ion-item>
+  <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="perfil">
+      <ion-icon name="body-outline"></ion-icon>
+      <ion-label>Inicie seccion</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</div>
+
 </ion-content>
