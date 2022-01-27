@@ -118,6 +118,7 @@ export class CarroPage implements OnInit {
     for (let x = 0; x < this.listaproductos.length; x++) {
       this.directorio[x] =0;
     }
+    this.directorio[17] =0;
     this.total=0;
     await this.storage.set('directorio',this.directorio);
     window.location.reload();

@@ -49,7 +49,9 @@ export class HomePage implements OnInit {
   }
 
   async cusuario(){
+    if(this.directorio[16]==0){
     this.mensaje("Favor de iniciar sesión para poder visualizar contenido");
+    }
   }
 
 }
