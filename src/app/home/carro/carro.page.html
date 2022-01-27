@@ -5,5 +5,17 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <div *ngFor="let compras of listaproductos;let indice=index"> 
+      <ion-item *ngIf="mostrar==true && directorio[indice]!=0">
+        <p>
+          {{directorio[indice]}} X {{listaproductos[indice].nombre}}
+        </p>
+      </ion-item>
+    </div>
+    <h1>Total:{{total}}$</h1>
+    <ion-button (click)="pagar()" expand="block" fill="clear" shape="round">
+      PAGAR
+    </ion-button>
+  </ion-list>
 </ion-content>
