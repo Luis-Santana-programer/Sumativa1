@@ -3,7 +3,7 @@
 <ion-content [fullscreen]="true">
   <ion-tabs *ngIf="directorio[15]==true">
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="carro">
+      <ion-tab-button tab="carro" (click)="cusuario()">
         <ion-icon name="basket-outline"></ion-icon>
         <ion-label>Carro</ion-label>
         <ion-badge>{{directorio[17]}}</ion-badge>
@@ -23,18 +23,14 @@
 
   <div *ngIf="directorio[15]==false">
     <ion-text>
-      <h1>Inicie seccion</h1>
+      <h1>Iniciar sesion</h1>
     </ion-text>
   <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="perfil">
       <ion-icon name="body-outline"></ion-icon>
-      <ion-label>Inicie seccion</ion-label>
+      <ion-label>Iniciar sesion</ion-label>
     </ion-tab-button>
-    <!-- <ion-tab-button tab="registro">
-      <ion-icon name="add-outline"></ion-icon>
-      <ion-label>Registrese</ion-label>
-    </ion-tab-button> -->
   </ion-tab-bar>
 </ion-tabs>
 </div>

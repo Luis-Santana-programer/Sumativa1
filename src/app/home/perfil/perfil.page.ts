@@ -41,6 +41,11 @@ export class PerfilPage implements OnInit {
   async Cerrar(){
     this.directorio[15]=false;
     this.directorio[16]=0;
+    this.directorio[17]=0;
+    for (let index = 0; index < 15; index++) {
+      this.directorio[index]=0;
+      
+    }
     await this.storage.set('directorio',this.directorio);
     window.location.reload();
   }

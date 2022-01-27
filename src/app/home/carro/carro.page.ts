@@ -98,7 +98,7 @@ export class CarroPage implements OnInit {
     await this.storage.create();
     this.directorio=await this.storage.get('directorio');
     if(this.directorio[16]==0){
-      this.mensaje("Favor de iniciar sesión para poder visualizar contenido");
+     // this.mensaje("Favor de iniciar sesión para poder visualizar contenido");
     }else{
       this.mostrar=true;
       for (let x = 0; x < this.listaproductos.length; x++) {
@@ -121,5 +121,10 @@ export class CarroPage implements OnInit {
     this.total=0;
     await this.storage.set('directorio',this.directorio);
     window.location.reload();
+  }
+  async cusuario(){
+    if(this.directorio[16]==0){
+      this.mensaje("Favor de iniciar sesión para poder visualizar contenido");
+    }
   }
 }

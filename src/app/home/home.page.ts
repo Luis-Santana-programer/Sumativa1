@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { AlertController, ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -14,7 +15,7 @@ export class HomePage implements OnInit {
   password: string;
   pusuario: string;
   productos: any;
-  constructor(private storage: Storage) {
+  constructor(private storage: Storage, private alerta: AlertController) {
     this.productos=[];
     for (let index = 0; index < 15; index++) {
       this.productos.push("1");
@@ -38,6 +39,17 @@ export class HomePage implements OnInit {
     }
 
   }
+  async mensaje(x: string){
+    const alert = await this.alerta.create({
+      header: 'Alerta',
+      message: x,
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
 
+  async cusuario(){
+    this.mensaje("Favor de iniciar sesión para poder visualizar contenido");
+  }
 
 }

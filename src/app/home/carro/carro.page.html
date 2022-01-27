@@ -13,9 +13,11 @@
         </p>
       </ion-item>
     </div>
+    <div *ngIf="mostrar==true">
     <h1>Total:{{total}}$</h1>
     <ion-button (click)="pagar()" expand="block" fill="clear" shape="round">
       PAGAR
     </ion-button>
+    </div>
   </ion-list>
 </ion-content>
